@@ -10,20 +10,22 @@ public class Drug implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    @org.kie.api.definition.type.Label("DIN")
+   @org.kie.api.definition.type.Description("Drug Identification Number")
    private java.lang.String din;
    @org.kie.api.definition.type.Label("Name of Drug")
    private java.lang.String name;
 
-   @org.kie.api.definition.type.Label(value = "Current?")
+   @org.kie.api.definition.type.Label("Current?")
    private boolean current;
 
-   @org.kie.api.definition.type.Label(value = "Dosage")
+   @org.kie.api.definition.type.Label("Dosage")
    private java.lang.String dosage;
 
-   @org.kie.api.definition.type.Label(value = "Approx. Therapy Timeframe")
+   @org.kie.api.definition.type.Label("Approx. Therapy Timeframe")
    private java.lang.String therapyTimeframe;
 
-   @org.kie.api.definition.type.Label(value = "Alternatives Inappropriate Reason")
+   @org.kie.api.definition.type.Label("Alternatives Inappropriate Reason")
+   @org.kie.api.definition.type.Description("Reason(s) why formulary alternatives are not appropriate")
    private java.lang.String alternativesInappropriateReason;
 
    public Drug()
