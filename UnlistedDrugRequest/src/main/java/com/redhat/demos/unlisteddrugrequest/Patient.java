@@ -22,8 +22,14 @@ public class Patient implements java.io.Serializable
    @org.kie.api.definition.type.Label("Phone")
    private java.lang.String phone;
 
-   @org.kie.api.definition.type.Label(value = "Address")
+   @org.kie.api.definition.type.Label("Address")
    private com.redhat.demos.unlisteddrugrequest.Address address;
+
+   @org.kie.api.definition.type.Label(value = "Health Number")
+   private java.lang.String healthNumber;
+
+   @org.kie.api.definition.type.Label(value = "Health Canada Approved?")
+   private boolean healthCanadaApproved;
 
    public Patient()
    {
@@ -89,9 +95,30 @@ public class Patient implements java.io.Serializable
       this.address = address;
    }
 
+   public java.lang.String getHealthNumber()
+   {
+      return this.healthNumber;
+   }
+
+   public void setHealthNumber(java.lang.String healthNumber)
+   {
+      this.healthNumber = healthNumber;
+   }
+
+   public boolean isHealthCanadaApproved()
+   {
+      return this.healthCanadaApproved;
+   }
+
+   public void setHealthCanadaApproved(boolean healthCanadaApproved)
+   {
+      this.healthCanadaApproved = healthCanadaApproved;
+   }
+
    public Patient(java.lang.String firstName, java.lang.String lastName,
          java.lang.Integer age, java.lang.String email, java.lang.String phone,
-         com.redhat.demos.unlisteddrugrequest.Address address)
+         com.redhat.demos.unlisteddrugrequest.Address address,
+         java.lang.String healthNumber, boolean healthCanadaApproved)
    {
       this.firstName = firstName;
       this.lastName = lastName;
@@ -99,6 +126,8 @@ public class Patient implements java.io.Serializable
       this.email = email;
       this.phone = phone;
       this.address = address;
+      this.healthNumber = healthNumber;
+      this.healthCanadaApproved = healthCanadaApproved;
    }
 
 }
