@@ -9,12 +9,18 @@ public class Patient implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "First Name")
+   @org.kie.api.definition.type.Label("First Name")
    private java.lang.String firstName;
-   @org.kie.api.definition.type.Label(value = "Last Name")
+   @org.kie.api.definition.type.Label("Last Name")
    private java.lang.String lastName;
-   @org.kie.api.definition.type.Label(value = "Age")
+   @org.kie.api.definition.type.Label("Age")
    private java.lang.Integer age;
+
+   @org.kie.api.definition.type.Label(value = "Email")
+   private java.lang.String email;
+
+   @org.kie.api.definition.type.Label(value = "Phone")
+   private java.lang.String phone;
 
    public Patient()
    {
@@ -50,12 +56,34 @@ public class Patient implements java.io.Serializable
       this.age = age;
    }
 
+   public java.lang.String getEmail()
+   {
+      return this.email;
+   }
+
+   public void setEmail(java.lang.String email)
+   {
+      this.email = email;
+   }
+
+   public java.lang.String getPhone()
+   {
+      return this.phone;
+   }
+
+   public void setPhone(java.lang.String phone)
+   {
+      this.phone = phone;
+   }
+
    public Patient(java.lang.String firstName, java.lang.String lastName,
-         java.lang.Integer age)
+         java.lang.Integer age, java.lang.String email, java.lang.String phone)
    {
       this.firstName = firstName;
       this.lastName = lastName;
       this.age = age;
+      this.email = email;
+      this.phone = phone;
    }
 
 }
