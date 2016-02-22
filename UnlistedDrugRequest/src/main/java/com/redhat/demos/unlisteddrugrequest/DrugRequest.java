@@ -9,23 +9,13 @@ public class DrugRequest implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "DIN")
-   private java.lang.String din;
-   @org.kie.api.definition.type.Label(value = "Start Date")
+   @org.kie.api.definition.type.Label("DIN")
+   private Drug din;
+   @org.kie.api.definition.type.Label("Start Date")
    private java.lang.String startDate;
 
    public DrugRequest()
    {
-   }
-
-   public java.lang.String getDin()
-   {
-      return this.din;
-   }
-
-   public void setDin(java.lang.String din)
-   {
-      this.din = din;
    }
 
    public java.lang.String getStartDate()
@@ -38,7 +28,18 @@ public class DrugRequest implements java.io.Serializable
       this.startDate = startDate;
    }
 
-   public DrugRequest(java.lang.String din, java.lang.String startDate)
+   public com.redhat.demos.unlisteddrugrequest.Drug getDin()
+   {
+      return this.din;
+   }
+
+   public void setDin(com.redhat.demos.unlisteddrugrequest.Drug din)
+   {
+      this.din = din;
+   }
+
+   public DrugRequest(com.redhat.demos.unlisteddrugrequest.Drug din,
+         java.lang.String startDate)
    {
       this.din = din;
       this.startDate = startDate;
