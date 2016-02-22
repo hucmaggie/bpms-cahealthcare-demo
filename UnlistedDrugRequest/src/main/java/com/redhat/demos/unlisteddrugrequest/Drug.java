@@ -9,9 +9,9 @@ public class Drug implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "DIN")
+   @org.kie.api.definition.type.Label("DIN")
    private java.lang.String din;
-   @org.kie.api.definition.type.Label(value = "Name od Drug")
+   @org.kie.api.definition.type.Label("Name of Drug")
    private java.lang.String name;
 
    public Drug()
