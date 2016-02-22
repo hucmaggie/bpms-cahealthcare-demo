@@ -16,11 +16,14 @@ public class Patient implements java.io.Serializable
    @org.kie.api.definition.type.Label("Age")
    private java.lang.Integer age;
 
-   @org.kie.api.definition.type.Label(value = "Email")
+   @org.kie.api.definition.type.Label("Email")
    private java.lang.String email;
 
-   @org.kie.api.definition.type.Label(value = "Phone")
+   @org.kie.api.definition.type.Label("Phone")
    private java.lang.String phone;
+
+   @org.kie.api.definition.type.Label(value = "Address")
+   private com.redhat.demos.unlisteddrugrequest.Address address;
 
    public Patient()
    {
@@ -76,14 +79,26 @@ public class Patient implements java.io.Serializable
       this.phone = phone;
    }
 
+   public com.redhat.demos.unlisteddrugrequest.Address getAddress()
+   {
+      return this.address;
+   }
+
+   public void setAddress(com.redhat.demos.unlisteddrugrequest.Address address)
+   {
+      this.address = address;
+   }
+
    public Patient(java.lang.String firstName, java.lang.String lastName,
-         java.lang.Integer age, java.lang.String email, java.lang.String phone)
+         java.lang.Integer age, java.lang.String email, java.lang.String phone,
+         com.redhat.demos.unlisteddrugrequest.Address address)
    {
       this.firstName = firstName;
       this.lastName = lastName;
       this.age = age;
       this.email = email;
       this.phone = phone;
+      this.address = address;
    }
 
 }
