@@ -14,6 +14,18 @@ public class Drug implements java.io.Serializable
    @org.kie.api.definition.type.Label("Name of Drug")
    private java.lang.String name;
 
+   @org.kie.api.definition.type.Label(value = "Current?")
+   private boolean current;
+
+   @org.kie.api.definition.type.Label(value = "Dosage")
+   private java.lang.String dosage;
+
+   @org.kie.api.definition.type.Label(value = "Approx. Therapy Timeframe")
+   private java.lang.String therapyTimeframe;
+
+   @org.kie.api.definition.type.Label(value = "Alternatives Inappropriate Reason")
+   private java.lang.String alternativesInappropriateReason;
+
    public Drug()
    {
    }
@@ -38,10 +50,57 @@ public class Drug implements java.io.Serializable
       this.name = name;
    }
 
-   public Drug(java.lang.String din, java.lang.String name)
+   public boolean isCurrent()
+   {
+      return this.current;
+   }
+
+   public void setCurrent(boolean current)
+   {
+      this.current = current;
+   }
+
+   public java.lang.String getDosage()
+   {
+      return this.dosage;
+   }
+
+   public void setDosage(java.lang.String dosage)
+   {
+      this.dosage = dosage;
+   }
+
+   public java.lang.String getTherapyTimeframe()
+   {
+      return this.therapyTimeframe;
+   }
+
+   public void setTherapyTimeframe(java.lang.String therapyTimeframe)
+   {
+      this.therapyTimeframe = therapyTimeframe;
+   }
+
+   public java.lang.String getAlternativesInappropriateReason()
+   {
+      return this.alternativesInappropriateReason;
+   }
+
+   public void setAlternativesInappropriateReason(
+         java.lang.String alternativesInappropriateReason)
+   {
+      this.alternativesInappropriateReason = alternativesInappropriateReason;
+   }
+
+   public Drug(java.lang.String din, java.lang.String name, boolean current,
+         java.lang.String dosage, java.lang.String therapyTimeframe,
+         java.lang.String alternativesInappropriateReason)
    {
       this.din = din;
       this.name = name;
+      this.current = current;
+      this.dosage = dosage;
+      this.therapyTimeframe = therapyTimeframe;
+      this.alternativesInappropriateReason = alternativesInappropriateReason;
    }
 
 }
