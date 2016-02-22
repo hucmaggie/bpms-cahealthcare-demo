@@ -21,12 +21,12 @@ public class Drug implements java.io.Serializable
    @org.kie.api.definition.type.Label("Dosage")
    private java.lang.String dosage;
 
-   @org.kie.api.definition.type.Label("Approx. Therapy Timeframe")
-   private java.lang.String therapyTimeframe;
-
    @org.kie.api.definition.type.Label("Alternatives Inappropriate Reason")
    @org.kie.api.definition.type.Description("Reason(s) why formulary alternatives are not appropriate")
    private java.lang.String alternativesInappropriateReason;
+
+   @org.kie.api.definition.type.Label(value = "Therapy Duration")
+   private java.lang.String therapyDuration;
 
    public Drug()
    {
@@ -72,16 +72,6 @@ public class Drug implements java.io.Serializable
       this.dosage = dosage;
    }
 
-   public java.lang.String getTherapyTimeframe()
-   {
-      return this.therapyTimeframe;
-   }
-
-   public void setTherapyTimeframe(java.lang.String therapyTimeframe)
-   {
-      this.therapyTimeframe = therapyTimeframe;
-   }
-
    public java.lang.String getAlternativesInappropriateReason()
    {
       return this.alternativesInappropriateReason;
@@ -93,16 +83,27 @@ public class Drug implements java.io.Serializable
       this.alternativesInappropriateReason = alternativesInappropriateReason;
    }
 
+   public java.lang.String getTherapyDuration()
+   {
+      return this.therapyDuration;
+   }
+
+   public void setTherapyDuration(java.lang.String therapyDuration)
+   {
+      this.therapyDuration = therapyDuration;
+   }
+
    public Drug(java.lang.String din, java.lang.String name, boolean current,
-         java.lang.String dosage, java.lang.String therapyTimeframe,
-         java.lang.String alternativesInappropriateReason)
+         java.lang.String dosage,
+         java.lang.String alternativesInappropriateReason,
+         java.lang.String therapyDuration)
    {
       this.din = din;
       this.name = name;
       this.current = current;
       this.dosage = dosage;
-      this.therapyTimeframe = therapyTimeframe;
       this.alternativesInappropriateReason = alternativesInappropriateReason;
+      this.therapyDuration = therapyDuration;
    }
 
 }
